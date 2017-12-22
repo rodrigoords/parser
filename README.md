@@ -13,13 +13,13 @@ docker-compose run
 With a correctly environment run with:
 
 ```
-java -jar parser-0.0.1.jar --startDate=2017-01-01.00:00:00 --duration=daily --threshold=200
+java -jar parser-0.0.1.jar --accesslog=path/to/file --startDate=2017-01-01.00:00:00 --duration=daily --threshold=200
 ```
 
  ### argument
  * bulk_insert.batch_size: (optional, default: 20) The batch size used in the bulk insert flush clear.
  * separatorRegex: (optional, default: \\|) Regex to parser file.
- * accesslog: path to file.
+ * accesslog: path to file, need to pass only the root path that contains the file example: accesslog=/tmp
  * filename: (optional, default: access.log) The file name with extension
 
  * startDate: start date to use as a filter.
